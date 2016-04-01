@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="/">
+
+  <title>JK BioPharma Solutions, Inc.</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/site.css">
+
+  <!--JS-->
+  <script src="libs/angular/angular.min.js"></script>
+  <script src="libs/angular-route/angular-route.min.js"></script>
+
+  <!--Angular Custom -->
+  <!--<script src="js/controllers/*"></script>-->
+  <script src="js/controllers/MainCtrl.js"></script>
+  <script src="js/controllers/AboutCtrl.js"></script>
+  
+  <script src="js/appRoutes.js"></script>
+  <script src="js/app.js"></script>
+
+</head>
+<body ng-app="bioPharmaApp" ng-controller="MainController">
+  <div class="container">
+    <nav class="navbar navbar-inverse">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">J.K.BioPharma</a>
+      </div>
+
+      <ul class="nav navbar-nav">
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+
+    <h1>BioPharma Solutions</h1>
+    <div ng-view></div>
+  </div>
+</body>
+
+</html>
