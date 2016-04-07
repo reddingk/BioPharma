@@ -1,21 +1,35 @@
 
+angular.module('bioPharmaApp', [
+'ngRoute',
+'appRoutes',
+'MainCtrl',
+'AboutCtrl']);
+
 // routes
 
-angular.module('appRoutes', []).config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
+(function () {
+	'use strict';
 
-$routeProvider
-  .when('/', {
-    templateUrl: 'views/home.html',
-    controller: 'MainController'
-  })
-  .when('/about', {
-    templateUrl: 'views/about.html',
-    controller: 'AboutController'
-  });
+  angular.module('appRoutes').config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
 
-  $locationProvider.html5Mode(true);
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/home.html',
+      controller: 'MainController'
+    })
+    .when('/about', {
+      templateUrl: 'views/about.html',
+      controller: 'AboutController'
+    })
+    .otherwise({
+       redirectTo: '/'
+    });
 
-}]);
+    $locationProvider.html5Mode(true);
+
+  }]);
+
+})();
 
 
 angular.module('AboutCtrl', []).controller('AboutController', function($scope){
@@ -25,9 +39,3 @@ angular.module('AboutCtrl', []).controller('AboutController', function($scope){
 angular.module('MainCtrl', []).controller('MainController', function($scope){
   $scope.title = "Home";
 });
-
-angular.module('bioPharmaApp', [
-'ngRoute',
-'appRoutes',
-'MainCtrl',
-'AboutCtrl']);

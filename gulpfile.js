@@ -14,8 +14,8 @@ var clean = require('gulp-clean');
     .pipe(jshint.reporter('default'));
 });*/
 
-gulp.task('browserify', function(){
-  gulp.src(['public/js/**/*.js'])    
+gulp.task('js', function(){
+  gulp.src(['public/js/**/*.js'])
     .pipe(concat('bundle.js'))
     .pipe(gulp.dest('dist/js'));
 });
