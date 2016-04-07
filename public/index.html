@@ -14,7 +14,6 @@
   <script src="libs/angular-route/angular-route.min.js"></script>
 
   <!--Angular Custom -->
-  <!--<script src="js/controllers/*"></script>-->
   <script src="js/controllers/MainCtrl.js"></script>
   <script src="js/controllers/AboutCtrl.js"></script>
 
@@ -23,12 +22,12 @@
 
 </head>
 <body ng-app="bioPharmaApp" ng-controller="MainController">
-  <nav class="navbar">
+  <nav class="navbar navbar-fixed-top">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">J.K.BioPharma</a>
     </div>
 
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav pull-right">
       <li><a href="">About us</a></li>
       <li><a href="">Service</a></li>
       <li><a href="">Pipeline</a></li>
@@ -37,8 +36,7 @@
     </ul>
   </nav>
 
-  <h1>BioPharma Solutions</h1>
-  <div ng-view></div>
+  <div class="mainBody" ng-view></div>
 </body>
 
 </html>
