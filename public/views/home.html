@@ -1,9 +1,5 @@
-<div>
-  <h2>{{title}}</h2>
-  <p>This is the home page</p>
-
-  <section id="s0">    
-    <div ng-include="sections.s1"></div>
-  </section>
-
+<div ng-repeat="section in sections">
+  <section ng-attr-id="{{section.id}}">
+    <div ng-include="section.template"></div>
+  </sections>
 </div>

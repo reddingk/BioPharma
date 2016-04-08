@@ -1,6 +1,6 @@
 /* site.css */
 .mainBody {
-  padding-top: 90px;
+  /*padding-top: 90px;*/
 }
 
 /*Header */
@@ -8,3 +8,26 @@
   padding-top: 20px;
 }
 /*END - Header*/
+
+/*Body*/
+section {
+  width: 100%;
+  min-height: 650px;
+  padding-top: 50px;
+}
+
+#home1 {
+  background-color: #e2e2e2;
+}
+#teamwork {
+  background-color: #efefef;
+}
+#services {
+  background-color: #53616A;
+}
+#investors {
+  background-color: #ffffff;
+}
+#contactus {
+  background-color: #efefef;
+}
