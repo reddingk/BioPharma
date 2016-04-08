@@ -1,6 +1,7 @@
 /* site.css */
-.mainBody {
-  /*padding-top: 90px;*/
+html, body, .mainBody, .mainBody div {
+  height: 100%;
+  weight: 100%;
 }
 
 /*Header */
@@ -11,9 +12,9 @@
 
 /*Body*/
 section {
-  width: 100%;
-  min-height: 650px;
   padding-top: 50px;
+  width: 100%;
+  height: 100%;
 }
 
 #home1 {
