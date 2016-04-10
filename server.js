@@ -35,7 +35,7 @@ app.use(express.static(__dirname + '/public'));
 
 // routes
 // Route for database set up
-require('./app/routes')(app);
+//require('./app/routes')(app);
 
 // start app
 app.listen(port);
