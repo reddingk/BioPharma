@@ -10,7 +10,10 @@ $routeProvider
   .when('/about', {
     templateUrl: 'views/about.html',
     controller: 'AboutController'
-  });
+  })
+  .otherwise({
+        redirectTo: '/'
+      });
 
   $locationProvider.html5Mode(true);
 

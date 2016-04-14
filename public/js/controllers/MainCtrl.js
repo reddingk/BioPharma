@@ -6,7 +6,7 @@ angular.module('MainCtrl', []).controller('MainController', function($scope){
     "s2": 'views/templates/_services.html'
   };*/
   $scope.sections = [
-    {"id":"home1", "template":'views/templates/_home1.html'},
+    {"id":"main", "template":'views/templates/_main.html'},
     {"id":"teamwork", "template":'views/templates/_teamwork.html'},
     {"id":"services", "template":'views/templates/_services.html'},
     {"id":"investors", "template":'views/templates/_investors.html'},
