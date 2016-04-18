@@ -8,18 +8,26 @@ html, body, .mainBody, .sectionBody {
 
 h1 {
   font-weight: bold;
+  font-size: 2.777rem;
+}
+.mainTitle {
+  font-weight: 100;
+  font-size: 3.222rem;
 }
 /*Header */
 .navbar {
-  padding-top: 20px;
+  padding-top: 27px;
+  height: 80px;
   font-size: .944rem;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.6);
+  padding: 27px 10px 0px 10px;
 }
 .navbar-brand{
     padding: 0px 15px;
+    height: 100%;
 }
 .navbar-brand .logo {
-  width: 170px;
+  width: 220px;
   color: #ffffff;
 }
 .st1 {
@@ -28,12 +36,19 @@ h1 {
 
 .navbar-nav li a {
   padding-top: 5px;
+  color:rgba(255, 255, 255,1);
+  padding: 5px 20px 15px 20px;
 }
 .navbar-nav li a:hover {
   background-color: rgba(0,0,0,0);
-  color: rgba(255,255,255,1);
+  color: rgba(255,255,255,0.5);
 }
 /*END - Header*/
+/*FOOTER*/
+.footer {
+  height:60px;
+  background-color: rgba(0,0,0,1);
+}
 
 /*Body*/
 .sectionBody {
@@ -61,42 +76,61 @@ section {
 }
 .templateBody .sectionHeader {
   text-transform: uppercase;
+  margin-bottom: 40px;
 }
-
+.templateBody p {
+  font-size: 1.7rem;
+  font-weight: 100;
+}
 .buttonSection {
   margin-top: 50px;
 }
 .sectionButton {
+  font-size: 1.16rem;
   margin-top: 10px;
   background-color: #2F363C;
   color: #ffffff;
-  padding: 5px;
+  padding: 10px 50px;
   min-width: 150px;
   display: inline-block;
+  text-transform: uppercase;
 }
-
+.sectionButton:hover {
+  background-color: rgba(0,123,182,1);
+  color:#ffffff;
+  text-decoration: none;
+}
 /*Main screen*/
 #main {
-  background-color: #e2e2e2;
+  background-color: #D4D3CE;
+
   background-image: url('/img/image_home.jpg');
   background-size: 100%;
 }
-
+.main {
+  margin-top:80px;
+  padding: 0% 7%;
+}
 .investorsPop {
-  font-size: 0.833rem;
+  font-size: 0.888rem;
   background-color: rgba(9,174,180, 0.9);
   color: #ffffff;
-  height: 200px !important;
-  width: 320px !important;
-  padding: 15px;
+  height: 235px !important;
+  width: 370px !important;
+  padding: 25px;
   position: absolute;
   bottom: 0px;
-  right: 15%;
+  right: 17%;
   text-align: center;
+  border-radius: 10px 10px 0px 0px;
 }
 .investorsPop h1 {
   margin-top: 0px;
   font-size: 1.556rem;
+  text-transform: uppercase;
+}
+.investorsPop p {
+  font-size: 0.888rem;
 }
 .popButton, .popButton:hover, .popButton:focus {
   color: #ffffff;
@@ -108,13 +142,20 @@ section {
   display: inline-block;
   width: 100%;
 }
+#investorsButton {
+  padding: 10px 5px;
+}
+#investorsButton:hover {
+  background-color: rgba(255,255,255,1);
+  color:rgba(9,174,180, 1);
+}
 /*Team Work Screen*/
 #teamwork {
   background-color: #efefef;
   background-image: url('/img/image_aboutus.svg');
 }
 .teamwork {
-  padding: 0px 27%;
+  padding: 0px 15%;
 }
 /*Services*/
 #services {
@@ -141,7 +182,7 @@ section {
   background-image: url('/img/image_investors.svg');
 }
 .investors {
-  padding:0px 25%;
+  padding:0px 15%;
 }
 
 /*Contact Us*/
@@ -149,3 +190,5 @@ section {
   background-color: #efefef;
   background-image: url('/img/image_contactus.svg');
 }
+
+/*Smaller screen sizes*/

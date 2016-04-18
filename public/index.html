@@ -8,7 +8,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/site.css">
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300' rel='stylesheet' type='text/css'>
 
   <!--JS-->
   <script src="libs/angular/angular.min.js"></script>
@@ -25,20 +25,21 @@
 <body ng-app="bioPharmaApp" ng-controller="MainController">
   <nav class="navbar navbar-fixed-top">
     <div class="navbar-header">
-      <!--<a class="navbar-brand" href="#main"><img src="/img/logo.svg" alt="JK BioPharma logo"></a>-->
-      <a class="navbar-brand" href="#main"><object type="image/svg+xml" data="/img/logo.svg" class="logo">J.K. BioPharma Logo</object></a>
+      <a class="navbar-brand" href="#main"><img src="/img/logo_jkbiopharma4.png" class="logo" alt="JK BioPharma logo"></a>
+      <!--<a class="navbar-brand" href="#main"><object type="image/svg+xml" data="/img/logo.svg" class="logo">J.K. BioPharma Logo</object></a>-->
     </div>
 
     <ul class="nav navbar-nav pull-right">
       <li><a href="#teamwork">About us</a></li>
       <li><a href="#services">Service</a></li>
-      <li><a href="#pipeline">Pipeline</a></li>
+      <!--<li><a href="#pipeline">Pipeline</a></li>-->
       <li><a href="#investors">Investors</a></li>
       <li><a href="#contactus">Contact us</a></li>
     </ul>
   </nav>
 
   <div class="mainBody" ng-view></div>
+
 </body>
 
 </html>
