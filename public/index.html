@@ -14,6 +14,7 @@
   <!--JS-->
   <script src="libs/angular/angular.min.js"></script>
   <script src="libs/angular-route/angular-route.min.js"></script>
+  <script src="libs/angular-scroll/angular-scroll.min.js"></script>
 
   <!--Angular Custom -->
   <script src="js/controllers/MainCtrl.js"></script>
@@ -26,16 +27,16 @@
 <body ng-app="bioPharmaApp" ng-controller="MainController">
   <nav class="navbar navbar-fixed-top">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#main"><img src="/img/logo_jkbiopharma4.png" class="logo" alt="JK BioPharma logo"></a>
+      <a class="navbar-brand" href="#main" du-smooth-scroll du-scrollspy><img src="/img/logo_jkbiopharma4.png" class="logo" alt="JK BioPharma logo"></a>
       <!--<a class="navbar-brand" href="#main"><object type="image/svg+xml" data="/img/logo.svg" class="logo">J.K. BioPharma Logo</object></a>-->
     </div>
 
     <ul class="nav navbar-nav pull-right">
-      <li><a href="#teamwork">About us</a></li>
-      <li><a href="#services">Service</a></li>
+      <li><a href="#teamwork" du-smooth-scroll du-scrollspy>About us</a></li>
+      <li><a href="#services" du-smooth-scroll du-scrollspy>Service</a></li>
       <!--<li><a href="#pipeline">Pipeline</a></li>-->
-      <li><a href="#investors">Investors</a></li>
-      <li><a href="#contactus">Contact us</a></li>
+      <li><a href="#investors" du-smooth-scroll du-scrollspy>Investors</a></li>
+      <li><a href="#contactus" du-smooth-scroll du-scrollspy>Contact us</a></li>
     </ul>
   </nav>
 
