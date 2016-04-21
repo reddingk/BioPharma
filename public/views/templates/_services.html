@@ -1,12 +1,15 @@
 <div class="templateBody services">
   <h1 class="sectionHeader">Services</h1>
 
-  <ul>
-    <li ng-repeat="service in services">
-      <div>{{service.title}}</div>
-      <p>{{service.content}}</p>
-    </li>
-  </ul>
+  <div class="servicesList">
+    <div class="serviceItem" ng-repeat="service in services">
+      <img src="/img/icon_star.svg">
+      <div class="serviceContent">
+        <div>{{service.title}}</div>
+        <p>{{service.content}}</p>
+      </div>
+    </div>
+  </div>
 
   <div class="buttonSection">
     <a href="#contactus" class="sectionButton">Contact Us</a>
