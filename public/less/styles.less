@@ -1,11 +1,18 @@
 @font: 'Roboto', sans-serif;
 @font-size: 18px;
+@mobile-device: ~"(max-width: 770px)";
+@mobile-section-height: 400px;
 
 html, body, .mainBody, .sectionBody {
   height: 100%;
   width: 100%;
   font-family: @font;
   font-size: @font-size;
+
+  @media @mobile-device{
+    max-height: @mobile-section-height;
+    font-size: 8px;
+  }
 }
 
 h1 {
@@ -19,6 +26,7 @@ h1 {
   font-size: .944rem;
   background-color: rgba(0,0,0,0.6);
   padding: 27px 10px 0px 10px;
+  @media @mobile-device{ padding-top:24px; }
 
   .navbar-header {
     .navbar-brand {
@@ -27,10 +35,22 @@ h1 {
       .logo {
         width: 220px;
         color: #ffffff;
+        @media @mobile-device{ width: 180px;  padding-top:5px;   }
+      }
+    }
+
+    .navbar-toggle {
+      border-color: #ffffff;
+      margin-top: 0px;
+
+      .icon-bar {
+        background-color: #ffffff;
       }
     }
   }
-
+  .collapse.in{
+    background-color: rgba(0,0,0,0.6);
+  }
   .navbar-nav {
     li {
       a {
@@ -53,7 +73,8 @@ h1 {
 
 /*BODY*/
 .sectionBody {
-  min-height: 750px;
+  min-height: 650px;
+  @media @mobile-device{ max-height: @mobile-section-height; min-height: @mobile-section-height; }
   section {
     padding-top: 50px;
     width: 100%;
@@ -63,10 +84,13 @@ h1 {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
+    @media @mobile-device{  max-height: @mobile-section-height; min-height: @mobile-section-height;  }
 
     .sectionTemplate {
       padding: 0px 20px;
       height: 100%;
+
+      @media @mobile-device{  max-height: @mobile-section-height;   }
 
       .templateBody {
         padding: 50px 30px 0px 30px;
@@ -136,6 +160,9 @@ h1 {
             right: 17%;
             text-align: center;
             border-radius: 10px 10px 0px 0px;
+
+            @media @mobile-device{ display:none; }
+
             &.screenPass {
               position: absolute !important;
             }
