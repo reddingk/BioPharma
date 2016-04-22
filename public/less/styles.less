@@ -69,9 +69,12 @@ h1 {
       height: 100%;
 
       .templateBody {
-        padding: 0px 30px;
-        margin-top: 50px;
+        padding: 50px 30px 0px 30px;
+        //margin-top: 50px;
         text-align: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
 
         .mainTitle {
           font-weight: 100;
@@ -118,8 +121,8 @@ h1 {
       background-image: url('/img/image_home.jpg');
       .sectionTemplate {
         .main {
-          margin-top:80px;
-          padding: 0% 7%;
+          //margin-top:80px;
+          padding: 80px 7% 0% 7%;
 
           .investorsPop {
             font-size: 0.888rem;
@@ -128,12 +131,14 @@ h1 {
             height: 235px !important;
             width: 370px !important;
             padding: 25px;
-            position: absolute;
+            position: fixed;
             bottom: 0px;
             right: 17%;
             text-align: center;
             border-radius: 10px 10px 0px 0px;
-
+            &.screenPass {
+              position: absolute !important;
+            }
             h1 {
               margin-top: 0px;
               font-size: 1.556rem;
@@ -168,7 +173,7 @@ h1 {
       background-image: url('/img/image_aboutus.svg');
 
       .teamwork {
-        padding: 0px 15%;
+        padding: 50px 15% 0% 15%;
       }
     }
 
@@ -209,7 +214,7 @@ h1 {
       background-image: url('/img/image_investors.svg');
 
       .investors {
-        padding:0px 15%;
+        padding: 50px 15% 0% 15%;
       }
     }
 

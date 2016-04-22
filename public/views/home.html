@@ -1,12 +1,12 @@
 <div class="sectionBody" ng-repeat="section in sections">
-  <a ng-attr-id="{{section.id}}" class="smooth"></a>
+  <a ng-attr-id="{{section.id}}link" class="smooth"></a>
   <section ng-attr-id="{{section.id}}">
     <div class="sectionTemplate" ng-include="section.template"></div>
   </sections>
 
 </div>
 
-<div class="footer">
+<div class="footer" id="footerbottom">
   <div class="container">
     Footer TEXT
   </div>
