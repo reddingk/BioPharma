@@ -1,7 +1,7 @@
 @font: 'Roboto', sans-serif;
 @font-size: 18px;
 @mobile-device: ~"(max-width: 770px)";
-@mobile-section-height: 400px;
+@mobile-section-height: 700px;
 
 html, body, .mainBody, .sectionBody {
   height: 100%;
@@ -18,6 +18,8 @@ html, body, .mainBody, .sectionBody {
 h1 {
   font-weight: bold;
   font-size: 2.777rem;
+
+  @media @mobile-device{  font-size: 5rem;}
 }
 /*Navigation*/
 .navbar {
@@ -26,7 +28,10 @@ h1 {
   font-size: .944rem;
   background-color: rgba(0,0,0,0.6);
   padding: 27px 10px 0px 10px;
-  @media @mobile-device{ padding-top:24px; }
+  @media @mobile-device{
+    padding-top:20px;
+    height: 70px;
+   }
 
   .navbar-header {
     .navbar-brand {
@@ -48,14 +53,16 @@ h1 {
       }
     }
   }
-  .collapse.in{
-    background-color: rgba(0,0,0,0.6);
+  .navbar-collapse{
+    @media @mobile-device { background-color: rgba(0,0,0,0.6); margin: 0px -25px; }
   }
   .navbar-nav {
     li {
       a {
         color:rgba(255, 255, 255,1);
         padding: 5px 20px 15px 20px;
+        @media @mobile-device{ font-size: 2rem;  }
+
         &:hover, &:focus {
           background-color: rgba(0,0,0,0);
           color: rgba(255,255,255,0.5);
@@ -107,17 +114,28 @@ h1 {
 
         .sectionHeader {
           text-transform: uppercase;
-          margin-bottom: 40px;
+          margin-bottom: 30px;
         }
 
         p {
           font-size: 1.7rem;
           font-weight: 100;
+
+          @media @mobile-device{  font-size: 2.4rem; }
         }
 
         .buttonSection {
           margin-top: 50px;
+          @media @mobile-device{  margin-top: 30px; }
 
+          &.mobile-button {
+            display: none;
+            @media @mobile-device{  display: block; }
+
+            .sectionButton {
+              background-color: rgba(9,174,180, 0.9);
+            }
+          }
           .sectionButton {
             font-size: 1.16rem;
             margin-top: 10px;
@@ -127,6 +145,11 @@ h1 {
             min-width: 150px;
             display: inline-block;
             text-transform: uppercase;
+            @media @mobile-device{
+              padding: 10px 30px;
+              font-size: 2.40rem;
+              letter-spacing: 2px;
+            }
 
             &:hover {
               background-color: rgba(0,123,182,1);
@@ -143,10 +166,13 @@ h1 {
     &#main {
       background-color: #D4D3CE;
       background-image: url('/img/image_home.jpg');
+      @media @mobile-device{ background-size: 270% 88%;}
+
       .sectionTemplate {
         .main {
           //margin-top:80px;
           padding: 80px 7% 0% 7%;
+          @media @mobile-device{ padding: 40px 7% 0% 7%; }
 
           .investorsPop {
             font-size: 0.888rem;
@@ -199,8 +225,13 @@ h1 {
       background-color: #efefef;
       background-image: url('/img/image_aboutus.svg');
 
+      @media @mobile-device{
+        background-size: 200%;
+      }
+
       .teamwork {
         padding: 50px 15% 0% 15%;
+        @media @mobile-device{     padding: 30px 5% 0% 5%;     }
       }
     }
 
@@ -210,10 +241,12 @@ h1 {
       background-image: url('/img/image_services.svg');
       background-size: 100% 60%;
       background-position-y: 130%;
+      @media @mobile-device{  background-size: 100%;  background-position-y: 100%; }
 
       .services {
           color: rgba(255,255,255,1);
           padding: 50px 250px 0px 250px;
+          @media @mobile-device{  padding: 30px 5% 0% 5%;  }
 
           .servicesList {
             text-align: left;
