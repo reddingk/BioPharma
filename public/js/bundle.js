@@ -50,12 +50,21 @@
       var vm = this;
       vm.title = "Home";
 
+      vm.sections_old = [
+        {"id":"main", "template":'views/templates/_main.html'},
+        {"id":"teamwork", "template":'views/templates/demo/_teamwork.html'},
+        {"id":"services", "template":'views/templates/demo/_services.html'},
+        {"id":"investors", "template":'views/templates/demo/_investors.html'},
+        {"id":"contactus", "template":'views/templates/pages/_contactus.html'}
+      ];
+
       vm.sections = [
         {"id":"main", "template":'views/templates/_main.html'},
-        {"id":"teamwork", "template":'views/templates/_teamwork.html'},
-        {"id":"services", "template":'views/templates/_services.html'},
-        {"id":"investors", "template":'views/templates/_investors.html'},
-        {"id":"contactus", "template":'views/templates/_contactus.html'}
+        {"id":"aboutus", "template":'views/templates/pages/_aboutus.html'},
+        {"id":"engagement", "template":'views/templates/pages/_engagement.html'},
+        {"id":"partnering", "template":'views/templates/pages/_partnering.html'},
+        {"id":"careers", "template":'views/templates/pages/_careers.html'},
+        {"id":"contactus", "template":'views/templates/pages/_contactus.html'},
       ];
 
       vm.services = [

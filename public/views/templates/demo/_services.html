@@ -2,11 +2,11 @@
   <h1 class="sectionHeader">Services</h1>
 
   <div class="servicesList">
-    <div class="serviceItem" ng-repeat="service in services">
+    <div class="serviceItem" ng-repeat="service in hc.services">
       <img src="/img/icon_star.svg">
       <div class="serviceContent">
-        <div>{{hc.service.title}}</div>
-        <p>{{hc.service.content}}</p>
+        <div>{{service.title}}</div>
+        <p>{{service.content}}</p>
       </div>
     </div>
   </div>
