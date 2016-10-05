@@ -1,0 +1,36 @@
+#services {
+      background-color: #53616A;
+      background-image: url('/img/image_services.svg');
+      background-size: 100% 60%;
+      background-position-y: 130%;
+      @media @mobile-device{  background-size: 100%;  background-position-y: 100%; }
+
+      .services {
+          color: rgba(255,255,255,1);
+          padding: 50px 250px 0px 250px;
+          @media @mobile-device{  padding: 30px 5% 0% 5%;  }
+
+          .servicesList {
+            text-align: left;
+            .serviceItem {
+              text-align: left;
+              margin-bottom: 30px;
+              img {
+                width: 70px;
+                position: absolute;
+              }
+              .serviceContent {
+                padding:27px 0px 0px 40px;
+                div {
+                  font-weight: bold;
+                  font-size: 1.167rem;
+                }
+                p {
+                  font-weight: normal;
+                  font-size: .889rem;
+                }
+              }
+            }
+          }
+      }
+    }

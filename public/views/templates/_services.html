@@ -1,0 +1,18 @@
+<div class="templateBody services">
+  <h1 class="sectionHeader">Services</h1>
+
+  <div class="servicesList">
+    <div class="serviceItem" ng-repeat="service in services">
+      <img src="/img/icon_star.svg">
+      <div class="serviceContent">
+        <div>{{hc.service.title}}</div>
+        <p>{{hc.service.content}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="buttonSection">
+    <a href="#contactus" du-smooth-scroll du-scrollspy class="sectionButton">Contact Us</a>
+  </div>
+
+</div>
