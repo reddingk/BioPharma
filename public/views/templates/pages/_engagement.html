@@ -1,3 +1,13 @@
 <div class="templateBody engagement">
   <h1 class="sectionHeader">Engagement Model</h1>
+
+  <div class="Emodels">
+    <uib-accordion close-others="true">
+      <div uib-accordion-group class="panel-default" ng-repeat="model in hc.EModels" is-open="model.isopen">
+        <uib-accordion-heading><div class="header-container"><span class="header-title">{{model.title}}</span> <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': model.isopen, 'glyphicon-chevron-right': !model.isopen}"></i></div> </uib-accordion-heading>
+        {{model.content}}
+      </div>
+    </uib-accordion>
+  </div>
+
 </div>
