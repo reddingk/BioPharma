@@ -35,11 +35,14 @@
         }
         else {
           var data = translateForm(vm.contactUsForm);
-          var config = {headers : { 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'} };
+          var url = "/sendgrid/sendemail" + translateForm(vm.contactUsForm);
+          //"/sendgrid/sendtest/77"
 
-          $http.post('https://api.sendgrid.com/api/mail.send.json', data, config)
-          .success(function(data, status, headers, config) { alert("Thank you we will get back to you as soon as we can."); clearform(); console.log(data);})
-          .error(function(data, status, headers, config){ console.log("There was an error sending Message Sorry"); });
+          $http({ method: 'GET', url: url})
+         .then(function successCallback(response) {
+            console.log("success");
+            console.log(response.data);
+          }, function errorCallback(response) { console.log("ERROR"); console.log(response); });
 
           alert("Thank you we will get back to you as soon as we can.");
           clearform();
@@ -54,8 +57,12 @@
         vm.contactUsForm.message = "";
       }
       function translateForm(form){
-        var fullText = "Name: " + form.name + " | Phone: " + form.phone + " | Message: " + form.message;
-        var returndata = {api_user:"jkbiopharma", api_key:SGKey, to:"kris.redding3@gmail.com", toname:"J.K. BioPharma", subject: form.subject, text: fullText ,from:form.toEmail}
+
+        var fullSubject = "WEBSITE EMAIL: " + form.subject;
+        var fullText = "Name: " + form.name + " | Email: "+form.toEmail +" | Phone: " + form.phone + " | Message: " + form.message;
+
+        var returnParams = "?api_user=jkbiopharma" +"&api_key="+SGKey+"&to=info@jkbiopharma.com&toname=JKBioPharma"+"&subject="+ fullSubject + "&text="+ fullText+"&from=info@jkbiopharma.com";
+        return returnParams;
       }
       // Demo Pages
       vm.sections_old = [
