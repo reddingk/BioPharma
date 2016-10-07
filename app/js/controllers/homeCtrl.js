@@ -1,7 +1,7 @@
 (function(){
    "use strict";
 
-    angular.module('homeCtrl').controller('HomeController', ['$state', function($state){
+    angular.module('homeCtrl').controller('HomeController', ['$state','$http', function($state, $http){
       var vm = this;
       vm.title = "Home";
 
@@ -34,6 +34,13 @@
           alert("The following field(s) are missing: " + errormessage.join());
         }
         else {
+          var data = translateForm(vm.contactUsForm);
+          var config = {headers : { 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'} };
+
+          $http.post('https://api.sendgrid.com/api/mail.send.json', data, config)
+          .success(function(data, status, headers, config) { alert("Thank you we will get back to you as soon as we can."); clearform(); console.log(data);})
+          .error(function(data, status, headers, config){ console.log("There was an error sending Message Sorry"); });
+
           alert("Thank you we will get back to you as soon as we can.");
           clearform();
         }
@@ -45,6 +52,10 @@
         vm.contactUsForm.subject = "";
         vm.contactUsForm.toEmail = "";
         vm.contactUsForm.message = "";
+      }
+      function translateForm(form){
+        var fullText = "Name: " + form.name + " | Phone: " + form.phone + " | Message: " + form.message;
+        var returndata = {api_user:"jkbiopharma", api_key:SGKey, to:"kris.redding3@gmail.com", toname:"J.K. BioPharma", subject: form.subject, text: fullText ,from:form.toEmail}
       }
       // Demo Pages
       vm.sections_old = [
