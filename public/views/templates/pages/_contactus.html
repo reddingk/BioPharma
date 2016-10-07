@@ -1,10 +1,11 @@
 <div class="templateBody contactus">
+  <div class="header-window"><img src="/img/backgrounds/6.jpg"></div>
   <h1 class="sectionHeader">Contact Us</h1>
 
   <div class="contact-page">
     <div class="content-area content-left">
       <div class="contact-address">
-        <span>JK BioPharma Solutions, Inc</span>
+        <span class="contact-title">JK BioPharma Solutions, Inc</span>
         <span>1 Research Court</span>
         <span>Suite 370</span>
         <span>Rockville, MD 20850</span>
@@ -19,18 +20,19 @@
     </div>
 
     <div class="content-area content-right">
-      <div class="contact-form">
-        <md-input-container><label>Name</label><input ng-model="hc.contactUsForm.name"></md-input-container>
-        <md-input-container><label>Phone</label><input ng-model="hc.contactUsForm.phone"></md-input-container>
-        <md-input-container><label>Email</label><input ng-model="hc.contactUsForm.toEmail"></md-input-container>
-        <md-input-container><label>Subject</label><input ng-model="hc.contactUsForm.subject"></md-input-container>
-        <md-input-container><label>Message</label><textarea ng-model="hc.contactUsForm.message" rows="3" md-select-on-focus></textarea></md-input-container>
+      <form class="contact-form" ng-submit="hc.sendEmail()">
+        <md-input-container><label>Name</label><input type="text" ng-model="hc.contactUsForm.name"></md-input-container>
+        <md-input-container><label>Phone</label><input type="tel" ng-model="hc.contactUsForm.phone"></md-input-container>
+        <md-input-container><label>Email</label><input type="email" ng-model="hc.contactUsForm.toEmail"></md-input-container>
+        <md-input-container><label>Subject</label><input type="text" ng-model="hc.contactUsForm.subject"></md-input-container>
+        <md-input-container><label>Message</label><textarea type="text" ng-model="hc.contactUsForm.message" rows="3" md-select-on-focus></textarea></md-input-container>
 
         <div class="buttonSection">
-          <a href="" class="sectionButton">Submit</a>
+          <input type="submit" value="Submit" class="sectionButton">
         </div>
-      </div>
+      </form>
 
     </div>
   </div>
+  <div style="clear:both"></div>
 </div>

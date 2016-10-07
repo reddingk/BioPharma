@@ -2,6 +2,7 @@
 @font-size: 18px;
 @mobile-device: ~"(max-width: 770px)";
 @mobile-section-height: 700px;
+@headerColor: rgba(37,109,181,1);
 
 html, body, .mainBody, .sectionBody {
   width: 100%;
@@ -26,8 +27,8 @@ h1 {
   padding-top: 27px;
   height: 80px;
   font-size: .944rem;
-  background-color: rgba(0,0,0,0.6);
-  padding: 27px 10px 0px 10px;
+  background-color: rgba(255,255,255,0.6);
+  padding: 15px 10px 0px 10px;
   @media @mobile-device{
     padding-top:20px;
     height: 70px;
@@ -45,27 +46,30 @@ h1 {
     }
 
     .navbar-toggle {
-      border-color: #ffffff;
+      border-color: #000000;
       margin-top: 0px;
 
       .icon-bar {
-        background-color: #ffffff;
+        background-color: #000000;
       }
     }
   }
   .navbar-collapse{
-    @media @mobile-device { background-color: rgba(0,0,0,0.6); margin: 0px -25px; }
+    @media @mobile-device { background-color: rgba(255,255,255,0.9); margin: 0px -25px; }
   }
   .navbar-nav {
+    padding-top:10px;
+    @media @mobile-device{ width: 100%;  }
     li {
       a {
-        color:rgba(255, 255, 255,1);
+        color: @headerColor;
+        font-weight: bold;
         padding: 5px 20px 15px 20px;
         @media @mobile-device{ font-size: 2rem;  }
 
         &:hover, &:focus {
           background-color: rgba(0,0,0,0);
-          color: rgba(255,255,255,0.5);
+          color: rgba(37,109,181,0.5);
         }
       }
     }
@@ -74,10 +78,12 @@ h1 {
 /*BODY*/
 .sectionBody {
   min-height: 800px;
+  background-color: #EFEFEF;
   @media @mobile-device{ max-height: @mobile-section-height; min-height: @mobile-section-height; }
+  .page-links { color: rgba(0,0,0,0);}
   section {
     position: relative;
-    padding-top: 50px;
+    padding-top: 56px;
     width: 100%;
     height: 100%;
     min-height: 850px;
@@ -88,16 +94,25 @@ h1 {
     @media @mobile-device{  max-height: @mobile-section-height; min-height: @mobile-section-height;  }
 
     .sectionTemplate {
-      padding: 0px 20px;
+      padding: 0px;
       height: 100%;
 
       @media @mobile-device{  max-height: @mobile-section-height;   }
 
       .templateBody {
-        padding: 50px 30px 50px 30px;
+        padding: 0px 0px 50px 0px;
         text-align: center;
         height: 100%;
         width: 100%;
+
+        .header-window {
+          overflow: hidden;
+          height: 220px;
+          position: relative;
+          img { width: 100%; position: absolute; top: -470px; left: 0;}
+
+          @media @mobile-device{ height: 120px; img { top: 0px; }  }
+        }
 
         .mainTitle {
           font-weight: 100;
@@ -105,7 +120,7 @@ h1 {
         }
 
         .sectionHeader {
-          text-transform: uppercase;
+          //text-transform: uppercase;
           margin-bottom: 30px;
         }
 
@@ -160,6 +175,22 @@ h1 {
 
 /*FOOTER*/
 .footer {
-  height:60px;
+  height:80px;
   background-color: rgba(0,0,0,1);
+  color: rgba(255,255,255,1);
+  #footerbottom {
+    overflow: hidden;
+    .container {
+      .footer-section {
+        display: inline-block;
+        width: 33%;
+        .section-row {
+          display: block;
+          h1{ font-size: 1rem;}
+          p { font-size: .889rem;}
+          a { font-size: .889rem; color: rgba(255,255,255,1); }
+        }
+      }
+    }
+  }
 }

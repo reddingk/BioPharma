@@ -24,6 +24,9 @@
           },
           'header':{
             templateUrl: 'views/templates/_header.html'
+          },
+          'footer':{
+            templateUrl: 'views/templates/_footer.html'
           }
         }
       })
@@ -63,7 +66,7 @@
         {"name":"Richard J. Kang, PhD", "title":"Molecular & Cell Biology", "resume":["Founder of JK BioPharma Solutions, Inc", "Presently Board of Director & Chief Operating Officer at NeoImmuneTech, Inc (Maryland)","Leader Group Mentors of Korea Innovation Center (KIC) for Ministry of Science, ICT and Future Planning (MSIP) of Korea", "Formerly Chief Executive Officer at NeoImmuneTech, Inc","PhD from the University of Edinburgh","Serial entrepreneur, experience in Management, Operation, R&D, Clinical Development and Business Development in Bio/Pharma companies", "Various research experience for 17 years (20 publications in Cell, Nature, J of Pathology etc.; 9 patents)" ]},
         {"name":"Sun Dae Kang, PhD", "title":"Economics", "resume":["Formerly Chairman at Nexol Investments", "Formerly Adjunctive Faculty at Myungji University", "Formerly the first Head of Economic Research Institute at Kyobo Life Insurance", "Formerly Vice President Kyobo Life Insurance", "Formerly Vice President at Hanshin Securities", "Formerly Director at Daewoo Economic Research Institute", "PhD from Yunsei University", "Depth of expertise across multiple economic domains including venture capitals, securities etc." ]}
       ];
-      vm.EModels = [{"title":"Strategic Plan", "img":"strategic_Plan.PNG", "isopen":false},{"title":"Innovation Management", "img":"innovation_management.PNG", "isopen":false},{"title":"Business Model", "img":"", "isopen":false}];
+      vm.EModels = [{"title":"Strategic Plan", "img":"models/Strategic_Plan.png", "isopen":false},{"title":"Innovation Management", "img":"models/Innovative_management.png", "isopen":false},{"title":"Business Model", "img":"models/Business_Model.png", "isopen":false}];
 
       vm.contactUsForm = {"name":"","phone":"","toEmail":"","subject":"","message":""};
       var SGKey = "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";
@@ -79,8 +82,17 @@
           alert("The following field(s) are missing: " + errormessage.join());
         }
         else {
-
+          alert("Thank you we will get back to you as soon as we can.");
+          clearform();
         }
+      }
+
+      function clearform() {
+        vm.contactUsForm.name = "";
+        vm.contactUsForm.phone = "";
+        vm.contactUsForm.subject = "";
+        vm.contactUsForm.toEmail = "";
+        vm.contactUsForm.message = "";
       }
       // Demo Pages
       vm.sections_old = [

@@ -1,10 +1,11 @@
 <div class="templateBody engagement">
+  <div class="header-window"><img src="/img/backgrounds/1.jpg"></div>
   <h1 class="sectionHeader">Engagement Model</h1>
 
   <div class="Emodels">
     <uib-accordion close-others="true">
       <div uib-accordion-group class="panel-default" ng-repeat="model in hc.EModels" is-open="model.isopen">
-        <uib-accordion-heading><div class="header-container"><span class="header-title">{{model.title}}</span> <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': model.isopen, 'glyphicon-chevron-right': !model.isopen}"></i></div> </uib-accordion-heading>
+        <uib-accordion-heading><div class="header-container"><i class="pull-left glyphicon" ng-class="{'glyphicon-minus': model.isopen, 'glyphicon-plus': !model.isopen}"></i><span class="header-title">{{model.title}}</span></div> </uib-accordion-heading>
         <img class="model-img" ng-src="img/{{model.img}}" ng-if="model.img != ''">
       </div>
     </uib-accordion>

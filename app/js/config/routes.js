@@ -13,6 +13,9 @@
           },
           'header':{
             templateUrl: 'views/templates/_header.html'
+          },
+          'footer':{
+            templateUrl: 'views/templates/_footer.html'
           }
         }
       })

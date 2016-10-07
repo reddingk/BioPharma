@@ -1,8 +1,15 @@
 #contactus {
-  background-color: #efefef;
-  background-image: url('/img/image_contactus.svg');
+  background-color: #EFEFEF;
+  .header-window {
+    img {
+      top: -165px;
+      @media @mobile-device{ top: 0px;  } 
+    }
+  }
 
   .contact-page {
+    width: 75%;
+    margin: 0 auto;
     .content-area {
       display: inline-block;
       width: 50%;
@@ -10,19 +17,27 @@
       &.content-right { float: right; }
       .contact-form {
         text-align: left;
-        background-color: rgba(255,255,255,0.5);
-        padding: 30px 20px;
+        padding: 0px 20px;
         color: rgba(0,0,0,1);
         md-input-container {
+          margin-top: 0px;
+          margin-bottom: 10px;
           display: block;
-          label { color: rgba(0,0,0,1);}
+
+          label { color: rgba(0,0,0,1); bottom: 85%; left: 10px;}
+          input, textarea { background-color: rgba(255,255,255,1); border: 1px solid rgba(0,0,0,1);}
+          .md-errors-spacer { min-height: 10px; }
         }
         .buttonSection { text-align: center; margin-top: 10px; }
       }
       .contact-address {
         text-align: left;
         padding-bottom: 20px;
-        span {display: block; font-size: 1rem;}
+        span {
+          display: block;
+          font-size: 1rem;
+          &.contact-title { color: @headerColor; font-weight: bold;}
+        }
       }
     }
   }

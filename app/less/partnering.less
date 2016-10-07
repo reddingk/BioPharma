@@ -1,15 +1,22 @@
 #partnering {
-  background-color: #83926F;
-  background-image: url('/img/image_services.svg');
+  background-color: #EFEFEF;
+  .header-window {
+    img {
+      top: -165px;
+      @media @mobile-device{ top: 0px;  }
+     }
+  }
 
   .partnering-options {
     text-align: left;
+    width: 75%;
+    margin: 0 auto;
     .option {
       padding-bottom:50px;
       .option-title {
         font-weight: bold;
         font-size: 1.5rem;
-        color:rgba(0,0,0,1);
+        color:@headerColor;
       }
       .option-description { font-size: 1.2rem; }
     }
