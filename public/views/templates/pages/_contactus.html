@@ -2,29 +2,33 @@
   <h1 class="sectionHeader">Contact Us</h1>
 
   <div class="contact-page">
-    <div class="content-area content-left"></div>
+    <div class="content-area content-left">
+      <div class="contact-address">
+        <span>JK BioPharma Solutions, Inc</span>
+        <span>1 Research Court</span>
+        <span>Suite 370</span>
+        <span>Rockville, MD 20850</span>
+      </div>
+      <div class="contact-address">
+        <span>Tel: 301-250-4490</span>
+        <span>Fax: 301-264-7037</span>
+        <span>Email: info@jkbiopharma.com</span>
+      </div>
+
+      <div class="contact-address"><span>Dial 070-7885-4193 in Korea</span></div>
+    </div>
+
     <div class="content-area content-right">
       <div class="contact-form">
-        <md-input-container>
-          <label>Name</label>
-          <input ng-model="">
-        </md-input-container>
-        <md-input-container>
-          <label>Phone</label>
-          <input ng-model="">
-        </md-input-container>
-        <md-input-container>
-          <label>Email</label>
-          <input ng-model="">
-        </md-input-container>
-        <md-input-container>
-          <label>Subject</label>
-          <input ng-model="">
-        </md-input-container>
-        <md-input-container>
-          <label>Message</label>
-          <textarea ng-model="" rows="5" md-select-on-focus></textarea>
-        </md-input-container>
+        <md-input-container><label>Name</label><input ng-model="hc.contactUsForm.name"></md-input-container>
+        <md-input-container><label>Phone</label><input ng-model="hc.contactUsForm.phone"></md-input-container>
+        <md-input-container><label>Email</label><input ng-model="hc.contactUsForm.toEmail"></md-input-container>
+        <md-input-container><label>Subject</label><input ng-model="hc.contactUsForm.subject"></md-input-container>
+        <md-input-container><label>Message</label><textarea ng-model="hc.contactUsForm.message" rows="3" md-select-on-focus></textarea></md-input-container>
+
+        <div class="buttonSection">
+          <a href="" class="sectionButton">Submit</a>
+        </div>
       </div>
 
     </div>
