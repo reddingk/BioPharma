@@ -1,16 +1,23 @@
 <div class="templateBody aboutus">
   <h1 class="sectionHeader">About Us</h1>
 
-  <div class="board-info">
-    <h2>Board of Directors</h2>
-    <div class="board-director">
-      <div class="director" ng-repeat="director in hc.boardOfDirectors">
-        <div class="director-header">
-          <div class="director-name">{{director.name}} <span>({{director.title}})</span></div>
+  <div class="about-info">
+    <uib-accordion close-others="true">
+      <div uib-accordion-group class="panel-default" ng-repeat="info in hc.aboutInfo" is-open="info.isopen">
+        <uib-accordion-heading><div class="header-container"><i class="pull-left glyphicon" ng-class="{'glyphicon-minus': info.isopen, 'glyphicon-plus': !info.isopen}"></i><span class="header-title">{{info.title}}</span></div> </uib-accordion-heading>
+        <div class="about-text" ng-if="info.type == 'text'">{{info.content}}</div>
+        <div class="about-list" ng-if="info.type == 'list'">
+          <div class="board-director">
+            <div class="director" ng-repeat="director in info.content">
+              <div class="director-header">
+                <div class="director-name">{{director.name}} <span>({{director.title}})</span></div>
+              </div>
+              <ul class="director-resume"><li class="item" ng-repeat="item in director.resume">{{item}}</li></ul>
+            </div>
+          </div>
         </div>
-        <ul class="director-resume"><li class="item" ng-repeat="item in director.resume">{{item}}</li></ul>
       </div>
-    </div>
+    </uib-accordion>
   </div>
 
 </div>

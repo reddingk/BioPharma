@@ -130,6 +130,25 @@ h1 {
 
           @media @mobile-device{  font-size: 2.4rem; }
         }
+        .panel-group {
+          .panel {
+            border:none !important;
+            background-color: rgba(255,255,255,0) !important;
+            .panel-heading {
+              background: none !important;
+              border: none !important;
+              color: @headerColor;
+              a:hover { text-decoration: none !important;}
+              .header-container{
+                max-width: 400px;
+                text-align: left;
+                .glyphicon { padding-top: 6px;}
+                .header-title { font-size: 1.5rem; padding-left: 7px; }
+              }
+            }
+            .model-img { width: 100%; }
+          }
+        }
 
         .buttonSection {
           margin-top: 50px;
@@ -183,11 +202,11 @@ h1 {
     .container {
       .footer-section {
         display: inline-block;
-        width: 33%;
+        width: 49%;
         .section-row {
           display: block;
           h1{ font-size: 1rem;}
-          p { font-size: .889rem;}
+          p { font-size: .79rem;}
           a { font-size: .889rem; color: rgba(255,255,255,1); }
         }
       }
