@@ -4,7 +4,8 @@
     angular.module('homeCtrl').controller('HomeController', ['$state','$http', function($state, $http){
       var vm = this;
       vm.title = "Home";
-
+      vm.test = "/img/backgrounds/6.jpg";
+      
       vm.sections = [
         {"id":"main", "template":'views/templates/_main.html'},
         {"id":"aboutus", "template":'views/templates/pages/_aboutus.html'},
@@ -18,10 +19,7 @@
         {"title":"Board Of Directors", "type":"list", "isopen":false, "content":[{"name":"Richard J. Kang, PhD", "title":"Molecular & Cell Biology", "resume":["Founder of JK BioPharma Solutions, Inc", "Presently Board of Director & Chief Operating Officer at NeoImmuneTech, Inc (Maryland)","Leader Group Mentors of Korea Innovation Center (KIC) for Ministry of Science, ICT and Future Planning (MSIP) of Korea", "Formerly Chief Executive Officer at NeoImmuneTech, Inc","PhD from the University of Edinburgh","Serial entrepreneur, experience in Management, Operation, R&D, Clinical Development and Business Development in Bio/Pharma companies", "Various research experience for 17 years (20 publications in Cell, Nature, J of Pathology etc.; 9 patents)" ]},{"name":"Sun Dae Kang, PhD", "title":"Economics", "resume":["Formerly Chairman at Nexol Investments", "Formerly Adjunctive Faculty at Myungji University", "Formerly the first Head of Economic Research Institute at Kyobo Life Insurance", "Formerly Vice President Kyobo Life Insurance", "Formerly Vice President at Hanshin Securities", "Formerly Director at Daewoo Economic Research Institute", "PhD from Yunsei University", "Depth of expertise across multiple economic domains including venture capitals, securities etc." ]} ]},
         {"title":"Special Advisors", "type":"text", "isopen":false, "content":""}
       ];
-      vm.boardOfDirectors =[
-        {"name":"Richard J. Kang, PhD", "title":"Molecular & Cell Biology", "resume":["Founder of JK BioPharma Solutions, Inc", "Presently Board of Director & Chief Operating Officer at NeoImmuneTech, Inc (Maryland)","Leader Group Mentors of Korea Innovation Center (KIC) for Ministry of Science, ICT and Future Planning (MSIP) of Korea", "Formerly Chief Executive Officer at NeoImmuneTech, Inc","PhD from the University of Edinburgh","Serial entrepreneur, experience in Management, Operation, R&D, Clinical Development and Business Development in Bio/Pharma companies", "Various research experience for 17 years (20 publications in Cell, Nature, J of Pathology etc.; 9 patents)" ]},
-        {"name":"Sun Dae Kang, PhD", "title":"Economics", "resume":["Formerly Chairman at Nexol Investments", "Formerly Adjunctive Faculty at Myungji University", "Formerly the first Head of Economic Research Institute at Kyobo Life Insurance", "Formerly Vice President Kyobo Life Insurance", "Formerly Vice President at Hanshin Securities", "Formerly Director at Daewoo Economic Research Institute", "PhD from Yunsei University", "Depth of expertise across multiple economic domains including venture capitals, securities etc." ]}
-      ];
+
       vm.EModels = [{"title":"Strategic Plan", "img":"models/Strategic_Plan.png", "isopen":false},{"title":"Innovation Management", "img":"models/Innovative_management.png", "isopen":false},{"title":"Business Model", "img":"models/Business_Model.png", "isopen":false}];
 
       vm.contactUsForm = {"name":"","phone":"","toEmail":"","subject":"","message":""};

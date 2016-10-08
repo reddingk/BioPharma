@@ -32,7 +32,8 @@ var config = {
       'app/libs/angular-ui-calendar/src/calendar.js',
       'app/libs/fullcalendar/dist/fullcalendar.min.js',
       'app/libs/fullcalendar/dist/gcal.js',
-      'app/libs/angular-scroll/angular-scroll.min.js'
+      'app/libs/angular-scroll/angular-scroll.min.js',
+      'app/libs/ng-simple-parallax/src/ngParallax.min.js'
     ],
     libsCSS: [
       'app/libs/angular-material/angular-material.min.css',
