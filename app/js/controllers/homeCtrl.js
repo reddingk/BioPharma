@@ -20,7 +20,7 @@
         {"title":"Special Advisors", "type":"text", "isopen":false, "content":"JK BioPharma Solutions, Inc. organizes a project-specialized scientific advisory group when we commit the project with a collaborator. The special advisory group consisting of substantially experienced experts in the area of the specified indication of a pipeline provides the most effective strategy to the project."}
       ];
 
-      vm.EModels = [{"title":"Strategic Plan", "img":"models/Strategic_Plan.png", "isopen":false},{"title":"Innovative Management", "img":"models/Innovative_management.png", "isopen":false},{"title":"Business Model", "img":"models/Business_Model.png", "isopen":false}];
+      vm.EModels = [{"title":"Strategic Plan", "img":"models/strategyplan.svg", "isopen":false},{"title":"Innovative Management", "img":"models/innovativemanagement.svg", "isopen":false},{"title":"Business Model", "img":"models/businessmodel.svg", "isopen":false}];
 
       vm.contactUsForm = {"name":"","phone":"","toEmail":"","subject":"","message":""};
       var SGKey = "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";
