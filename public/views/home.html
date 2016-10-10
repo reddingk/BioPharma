@@ -1,4 +1,4 @@
-<div class="sectionBody" ng-repeat="section in hc.sections">
+<div class="sectionBody" ng-repeat="section in hc.sections" ng-attr-id="{{section.id}}-section">
   <a ng-attr-id="{{section.id}}-link" class="smooth page-links">.</a>
   <div class="backscreen screen-{{section.id}}">
     <section ng-attr-id="{{section.id}}">
