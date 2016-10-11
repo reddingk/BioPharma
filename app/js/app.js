@@ -5,6 +5,6 @@
 		angular.module('config', [ 'ngMaterial' ]);
 		angular.module('directives', []);
 		/**/
-    angular.module('bioPharmaApp', ['ngMaterial','ngAnimate','ui.router','duScroll','ngParallax','directives', 'config','homeCtrl']);
+    angular.module('bioPharmaApp', ['ngMaterial','ngAnimate','ui.router','duScroll','directives', 'config','homeCtrl']);
 
 })();
