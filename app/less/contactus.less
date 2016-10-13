@@ -11,6 +11,7 @@
     width: 75%;
     margin: 0 auto;
     padding-top: 20px;
+    @media @mobile-device{ width: 90%; }
     .content-area {
       display: inline-block;
       width: 50%;
@@ -38,7 +39,8 @@
         span {
           display: block;
           font-size: .889rem;
-          &.contact-title { color: @headerColor; font-size: 1.5rem}
+          &.contact-title { color: @headerColor; font-size: 1.5rem; @media @mobile-device{ font-size: 1.7rem; } }
+          @media @mobile-device{ font-size: 1.5rem; }
         }
       }
     }
