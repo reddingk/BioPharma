@@ -17,8 +17,9 @@
       .option-title {
         font-size: 1.5rem;
         color:@headerColor;
+        @media @mobile-device{ font-size: 2.5rem;  }
       }
-      .option-description { font-size: .889rem; }
+      .option-description { font-size: .889rem;  @media @mobile-device{ font-size: 1.5rem;  }}
     }
   }
 }

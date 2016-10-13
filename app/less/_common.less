@@ -1,7 +1,7 @@
 @font: 'Roboto', sans-serif;
 @font-size: 18px;
 @mobile-device: ~"(max-width: 770px)";
-@mobile-section-height: 500px;
+@mobile-section-height: 550px;
 @headerColor: rgba(37,109,181,1);
 
 html, body, .mainBody, .sectionBody {
@@ -10,7 +10,6 @@ html, body, .mainBody, .sectionBody {
   font-size: @font-size;
 
   @media @mobile-device{
-    max-height: @mobile-section-height;
     font-size: 8px;
   }
 }
@@ -149,8 +148,8 @@ h1 {
         }
 
         .sectionHeader {
-          //text-transform: uppercase;
           margin-bottom: 30px;
+          @media @mobile-device{ font-size: 4rem; }
         }
 
         p {
@@ -173,7 +172,7 @@ h1 {
                 max-width: 400px;
                 text-align: left;
                 &.opened { color: @headerColor; }
-                .glyphicon { padding-top: 6px;}
+                .glyphicon { padding-top: 6px; @media @mobile-device{ padding-top: 2px; }}
                 .header-title {
                   font-size: 1.5rem;
                   padding-left: 7px;
