@@ -1,7 +1,7 @@
 @font: 'Roboto', sans-serif;
 @font-size: 18px;
 @mobile-device: ~"(max-width: 770px)";
-@mobile-section-height: 600px;
+@mobile-section-height: 500px;
 @headerColor: rgba(37,109,181,1);
 
 html, body, .mainBody, .sectionBody {
@@ -98,7 +98,7 @@ h1 {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
-    @media @mobile-device{  max-height: @mobile-section-height; min-height: @mobile-section-height;  }
+    @media @mobile-device{  min-height: @mobile-section-height;  }
 
     .sectionTemplate {
       padding: 0px;
@@ -174,7 +174,11 @@ h1 {
                 text-align: left;
                 &.opened { color: @headerColor; }
                 .glyphicon { padding-top: 6px;}
-                .header-title { font-size: 1.5rem; padding-left: 7px; }
+                .header-title {
+                  font-size: 1.5rem;
+                  padding-left: 7px;
+                  @media @mobile-device{ font-size: 2.5rem; }
+                }
               }
             }
             .panel-body { border: none !important;}
