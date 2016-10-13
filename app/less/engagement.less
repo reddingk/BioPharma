@@ -9,6 +9,12 @@
         width: 75%;
         margin: 0 auto;
         padding-bottom: 150px;
-        @media @mobile-device{ width: 90%; }
+        .mobile-model-img { display: none; }
+        .model-img { display: block; }
+        @media @mobile-device{
+          width: 90%;
+          .mobile-model-img { display: block; }
+          .model-img { display: none; }
+        }
       }
 }
