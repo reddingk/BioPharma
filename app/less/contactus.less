@@ -15,6 +15,8 @@
     .content-area {
       display: inline-block;
       width: 50%;
+      @media @mobile-device{ width: 100%; padding-bottom: 30px;}
+
       &.content-left { float: left;}
       &.content-right { float: right; }
       .contact-form {
@@ -26,16 +28,17 @@
           margin-bottom: 10px;
           display: block;
 
-          input { font-size: 0.889rem; height: 25px;}
-          input, textarea { background-color: rgba(255,255,255,1); border: 1px solid rgba(204,204,204,1); width: 100%; resize: none; }
+          input { font-size: 0.889rem; height: 25px; }
+          input, textarea { background-color: rgba(255,255,255,1); border: 1px solid rgba(204,204,204,1); width: 100%; resize: none; @media @mobile-device{ font-size: 1.5rem; }}
           .md-errors-spacer { min-height: 10px; }
         }
         .buttonSection { text-align: center; margin-top: 10px; }
-        p { font-size: .889rem; color: #000; font-weight: bold; }
+        p { font-size: .889rem; color: #000; @media @mobile-device{ font-size: 1.7rem; }}
       }
       .contact-address {
         text-align: left;
         padding-bottom: 20px;
+        @media @mobile-device{ text-align: center; }
         span {
           display: block;
           font-size: .889rem;

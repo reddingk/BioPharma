@@ -1,6 +1,13 @@
 #careers {
       background-color: #ffffff;
       min-height: 700px;
+      h2 { }
+
+      @media @mobile-device {
+        min-height: @mobile-section-height;
+        h2 { font-size: 2.5rem; }
+      }
+
       .header-window {
         img {
           top: -165px;
