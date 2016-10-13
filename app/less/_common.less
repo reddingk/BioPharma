@@ -50,7 +50,7 @@ h1 {
     .navbar-toggle {
       border-color: #000000;
       margin-top: 0px;
-      @media @mobile-device{  margin-top:10px; }
+      @media @mobile-device{  margin-top:10px; border-color: rgba(0,0,0,0); }
       .icon-bar {
         background-color: #000000;
       }
@@ -61,7 +61,7 @@ h1 {
   }
   .navbar-nav {
     padding-top:10px;
-    @media @mobile-device{ width: 100%;  }
+    @media @mobile-device{ width: 100%; text-align: center; float: initial !important; }
     li {
       a {
         color: @headerColor;
