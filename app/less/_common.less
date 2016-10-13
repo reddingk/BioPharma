@@ -1,7 +1,7 @@
 @font: 'Roboto', sans-serif;
 @font-size: 18px;
 @mobile-device: ~"(max-width: 770px)";
-@mobile-section-height: 700px;
+@mobile-section-height: 600px;
 @headerColor: rgba(37,109,181,1);
 
 html, body, .mainBody, .sectionBody {
@@ -86,7 +86,7 @@ h1 {
   &#careers-section{ background-color: #ffffff;}
   &#engagement-section { min-height: 600px; background-color: #ffffff;}
 
-  @media @mobile-device{ max-height: @mobile-section-height; min-height: @mobile-section-height; }
+  @media @mobile-device{ min-height: @mobile-section-height; }
   .page-links { color: rgba(0,0,0,0);}
   section {
     position: relative;
