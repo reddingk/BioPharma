@@ -248,10 +248,18 @@ h1 {
       .footer-section {
         display: inline-block;
         width: 49%;
+        @media @mobile-device{  width: 100%; display: block;}
         .section-row {
           display: block;
-          h1{ font-size: 1rem;}
-          p { font-size: .79rem;}
+          @media @mobile-device{  float: none !important; }
+          h1{ font-size: 1rem; @media @mobile-device{  font-size: 1.3rem; }}
+          p {
+            font-size: .79rem;
+            @media @mobile-device{
+              &.foot-email {font-size: 1rem;}
+              &.foot-copyright { font-size: .9rem; }
+            }
+          }
           a { font-size: .889rem; color: rgba(255,255,255,1); }
         }
       }
