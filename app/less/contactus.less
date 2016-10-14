@@ -28,7 +28,7 @@
           margin-bottom: 10px;
           display: block;
 
-          input { font-size: 0.889rem; height: 25px; }
+          input { font-size: 0.889rem; height: 25px; @media @mobile-device{ height: 30px;}}
           input, textarea { background-color: rgba(255,255,255,1); border: 1px solid rgba(204,204,204,1); width: 100%; resize: none; @media @mobile-device{ font-size: 1.5rem; }}
           .md-errors-spacer { min-height: 10px; }
         }
@@ -39,10 +39,14 @@
         text-align: left;
         padding-bottom: 20px;
         @media @mobile-device{ text-align: center; }
+
+        &.dial-address {
+          @media @mobile-device{ padding-bottom: 5px; }
+        }
         span {
           display: block;
           font-size: .889rem;
-          &.contact-title { color: @headerColor; font-size: 2rem; padding-bottom: 5px; @media @mobile-device{ font-size: 2rem; } }
+          &.contact-title { color: @headerColor; font-size: 2rem; padding-bottom: 10px; @media @mobile-device{ font-size: 2rem; } }
           @media @mobile-device{ font-size: 1.8rem; }
         }
       }
