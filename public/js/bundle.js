@@ -9,29 +9,42 @@
 
 })();
 
-angular.module('directives', []).directive('sectionBottom', function ($window) {
-  return {
-    restrict: 'EA',
-    link: function ($scope, element, attrs) {
+(function(){
 
-      angular.element($window).bind("scroll", function() {
-        var bottomSection = angular.element(document.getElementsByClassName("mainBody"))[0].children[1].offsetTop;
-        var windowp = angular.element($window)[0];
-        var invPop = angular.element(document.getElementsByClassName("investorsPop"));
-
-        if((windowp.innerHeight == bottomSection) || (windowp.pageYOffset > (bottomSection - this.innerHeight))){
-          if(!invPop.hasClass("screenPass"))
-            invPop.addClass("screenPass");
+  angular
+    .module('config')
+    .config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
+      $stateProvider
+      .state('app', {
+        url: "/",
+        views: {
+          'content':{
+            templateUrl: 'views/home.html',
+            controller: 'HomeController as hc'
+          },
+          'header':{
+            templateUrl: 'views/templates/_header.html'
+          },
+          'footer':{
+            templateUrl: 'views/templates/_footer.html'
+          }
         }
-        else {
-          if(invPop.hasClass("screenPass")){
-            invPop.removeClass("screenPass");
+      })
+      .state('app.construction', {
+        url: "underconstruction",
+        views: {
+          'content@': {
+            templateUrl: 'views/construction.html'
           }
         }
       });
-    }
-  }
-});
+
+      $urlRouterProvider.otherwise('/');
+      $locationProvider.html5Mode(true);
+    }]);
+
+
+})();
 
 (function(){
    "use strict";
@@ -106,39 +119,26 @@ angular.module('directives', []).directive('sectionBottom', function ($window) {
 
 })();
 
-(function(){
+angular.module('directives', []).directive('sectionBottom', function ($window) {
+  return {
+    restrict: 'EA',
+    link: function ($scope, element, attrs) {
 
-  angular
-    .module('config')
-    .config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
-      $stateProvider
-      .state('app', {
-        url: "/",
-        views: {
-          'content':{
-            templateUrl: 'views/home.html',
-            controller: 'HomeController as hc'
-          },
-          'header':{
-            templateUrl: 'views/templates/_header.html'
-          },
-          'footer':{
-            templateUrl: 'views/templates/_footer.html'
-          }
+      angular.element($window).bind("scroll", function() {
+        var bottomSection = angular.element(document.getElementsByClassName("mainBody"))[0].children[1].offsetTop;
+        var windowp = angular.element($window)[0];
+        var invPop = angular.element(document.getElementsByClassName("investorsPop"));
+
+        if((windowp.innerHeight == bottomSection) || (windowp.pageYOffset > (bottomSection - this.innerHeight))){
+          if(!invPop.hasClass("screenPass"))
+            invPop.addClass("screenPass");
         }
-      })
-      .state('app.construction', {
-        url: "underconstruction",
-        views: {
-          'content@': {
-            templateUrl: 'views/construction.html'
+        else {
+          if(invPop.hasClass("screenPass")){
+            invPop.removeClass("screenPass");
           }
         }
       });
-
-      $urlRouterProvider.otherwise('/');
-      $locationProvider.html5Mode(true);
-    }]);
-
-
-})();
+    }
+  }
+});
