@@ -1,7 +1,7 @@
 @font: 'Roboto', sans-serif;
 @font-size: 18px;
 @mobile-device: ~"(max-width: 770px)";
-@mobile-section-height: 550px;
+@mobile-section-height: 500px;
 @headerColor: rgba(37,109,181,1);
 
 html, body, .mainBody, .sectionBody {
@@ -141,7 +141,7 @@ h1 {
           bottom: 0;
           @media @mobile-device{
             position: relative;
-            margin-top:150px;
+            margin-top:100px;
             background-attachment: initial;
             background-size: 100%;
           }
@@ -176,6 +176,7 @@ h1 {
               background: none !important;
               border: none !important;
               color: rgba(0,0,0,1);
+              @media @mobile-device{  padding: 15px; }
               a:hover, a:focus { text-decoration: none !important;}
               .header-container{
                 max-width: 400px;
