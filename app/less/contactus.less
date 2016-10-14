@@ -18,7 +18,7 @@
       @media @mobile-device{ width: 100%; padding-bottom: 30px;}
 
       &.content-left { float: left;}
-      &.content-right { float: right; }
+      &.content-right { float: right; @media @mobile-device{ padding-bottom: 80px; }}
       .contact-form {
         text-align: left;
         padding: 0px 20px;
@@ -29,11 +29,12 @@
           display: block;
 
           input { font-size: 0.889rem; height: 25px; @media @mobile-device{ height: 30px;}}
+          textarea { @media @mobile-device{ height: 100px;} }
           input, textarea { background-color: rgba(255,255,255,1); border: 1px solid rgba(204,204,204,1); width: 100%; resize: none; @media @mobile-device{ font-size: 1.5rem; }}
           .md-errors-spacer { min-height: 10px; }
         }
         .buttonSection { text-align: center; margin-top: 10px; }
-        .req-fields { font-size: .889rem; color: #000; @media @mobile-device{ font-size: 1.7rem; }}
+        .req-fields { font-size: .889rem; color: #000; @media @mobile-device{ font-size: 1.5rem; }}
       }
       .contact-address {
         text-align: left;
