@@ -31,7 +31,7 @@
         {"title":"Special Advisors", "type":"text", "isopen":false, "content":"JK BioPharma Solutions, Inc. organizes a project-specialized scientific advisory group when we commit the project with a collaborator. The special advisory group consisting of substantially experienced experts in the area of the specified indication of a pipeline provides the most effective strategy to the project."}
       ];
 
-      vm.EModels = [{"title":"Strategic Plan", "img":"models/strategyplan.svg","mimg":"models/mobile/strategyplan_m.svg", "isopen":true},{"title":"Innovative Management", "img":"models/innovativemanagement.svg", "mimg":"models/mobile/innovativemanagement_m.svg","isopen":false},{"title":"Business Model", "img":"models/businessmodel.svg", "mimg":"models/mobile/businessmodel_m.svg","isopen":false}];
+      vm.EModels = [{"title":"Strategic Plan", "id":"SP", "img":"models/strategyplan.svg","mimg":"models/mobile/strategyplan_m.svg", "isopen":true},{"title":"Innovative Management", "id":"IM","img":"models/innovativemanagement.svg", "mimg":"models/mobile/innovativemanagement_m.svg","isopen":false},{"title":"Business Model", "id":"BM","img":"models/businessmodel.svg", "mimg":"models/mobile/businessmodel_m.svg","isopen":false}];
 
       vm.contactUsForm = {"name":"","phone":"","toEmail":"","subject":"","message":""};
       var SGKey = "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";
@@ -82,6 +82,30 @@
 
 })();
 
+angular.module('directives', []).directive('sectionBottom', function ($window) {
+  return {
+    restrict: 'EA',
+    link: function ($scope, element, attrs) {
+
+      angular.element($window).bind("scroll", function() {
+        var bottomSection = angular.element(document.getElementsByClassName("mainBody"))[0].children[1].offsetTop;
+        var windowp = angular.element($window)[0];
+        var invPop = angular.element(document.getElementsByClassName("investorsPop"));
+
+        if((windowp.innerHeight == bottomSection) || (windowp.pageYOffset > (bottomSection - this.innerHeight))){
+          if(!invPop.hasClass("screenPass"))
+            invPop.addClass("screenPass");
+        }
+        else {
+          if(invPop.hasClass("screenPass")){
+            invPop.removeClass("screenPass");
+          }
+        }
+      });
+    }
+  }
+});
+
 (function(){
 
   angular
@@ -118,27 +142,3 @@
 
 
 })();
-
-angular.module('directives', []).directive('sectionBottom', function ($window) {
-  return {
-    restrict: 'EA',
-    link: function ($scope, element, attrs) {
-
-      angular.element($window).bind("scroll", function() {
-        var bottomSection = angular.element(document.getElementsByClassName("mainBody"))[0].children[1].offsetTop;
-        var windowp = angular.element($window)[0];
-        var invPop = angular.element(document.getElementsByClassName("investorsPop"));
-
-        if((windowp.innerHeight == bottomSection) || (windowp.pageYOffset > (bottomSection - this.innerHeight))){
-          if(!invPop.hasClass("screenPass"))
-            invPop.addClass("screenPass");
-        }
-        else {
-          if(invPop.hasClass("screenPass")){
-            invPop.removeClass("screenPass");
-          }
-        }
-      });
-    }
-  }
-});

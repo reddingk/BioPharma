@@ -5,7 +5,7 @@
     <uib-accordion close-others="true">
       <div uib-accordion-group class="panel-default" ng-repeat="model in hc.EModels" is-open="model.isopen">
         <uib-accordion-heading><div class="header-container" ng-class="{'opened': model.isopen}"><i class="pull-left glyphicon" ng-class="{'glyphicon-minus': model.isopen, 'glyphicon-plus': !model.isopen}"></i><span class="header-title">{{model.title}}</span></div> </uib-accordion-heading>
-        <img class="model-img" ng-src="img/{{model.img}}" ng-if="model.img != ''">
+        <img class="model-img" ng-src="img/{{model.img}}" ng-if="model.img != ''" ng-attr-id="{{model.id}}">
         <img class="mobile-model-img" ng-src="img/{{model.mimg}}" ng-if="model.mimg != ''">
       </div>
     </uib-accordion>
