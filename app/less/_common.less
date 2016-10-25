@@ -70,7 +70,7 @@ h1 {
       a {
         color: @headerColor;
         font-weight: bold;
-        padding: 5px 20px 15px 20px;
+        padding: 15px 20px 15px 20px;
         @media @halfscreen-device{  padding: 5px 10px 15px 10px; font-size: .80rem; }
 
         @media @mobile-device{ font-size: 2rem; padding-bottom: 8px; }
@@ -87,12 +87,12 @@ h1 {
 .sectionBody {
   min-height: 700px;
   background-color: #EFEFEF;
-
+  position: relative;
   &#careers-section{ background-color: #ffffff;}
   &#engagement-section { min-height: 600px; background-color: #ffffff;}
 
   @media @mobile-device{ min-height: @mobile-section-height; }
-  .page-links { color: rgba(0,0,0,0);}
+  .page-links { color: rgba(0,0,0,0); position: absolute; top: -70px;}
   section {
     position: relative;
     padding-top: 56px;
