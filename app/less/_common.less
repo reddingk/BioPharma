@@ -1,6 +1,7 @@
 @font: 'Roboto', sans-serif;
 @font-size: 18px;
 @mobile-device: ~"(max-width: 770px)";
+@halfscreen-device: ~"(max-width: 940px)";
 @mobile-section-height: 500px;
 @headerColor: rgba(37,109,181,1);
 
@@ -40,6 +41,7 @@ h1 {
       .logo {
         width: 220px;
         color: #ffffff;
+        height: 100%;
         @media @mobile-device{ width: 180px;  padding-top:5px;   }
       }
       @media @mobile-device{  padding-left: 5px; }
@@ -69,6 +71,8 @@ h1 {
         color: @headerColor;
         font-weight: bold;
         padding: 5px 20px 15px 20px;
+        @media @halfscreen-device{  padding: 5px 10px 15px 10px; font-size: .80rem; }
+
         @media @mobile-device{ font-size: 2rem; padding-bottom: 8px; }
 
         &:hover, &:focus {
