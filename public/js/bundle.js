@@ -70,7 +70,7 @@
 
       vm.EModels = [{"title":"Strategic Plan", "id":"SP", "img":"models/strategyplan.svg","mimg":"models/mobile/strategyplan_m.svg", "isopen":false},{"title":"Innovative Management", "id":"IM","img":"models/innovativemanagement.svg", "mimg":"models/mobile/innovativemanagement_m.svg","isopen":false},{"title":"Business Model", "id":"BM","img":"models/businessmodel.svg", "mimg":"models/mobile/businessmodel_m.svg","isopen":false}];
 
-      vm.careersList =[ {"title":"Research Associate","link":"docs/job_posting_001.docx", "link_title":"job_posting_001.docx"}];
+      vm.careersList =[ {"title":"Research Associate","link":"docs/research_associate_job_description.pdf", "link_title":"research_associate_job_description.pdf"}];
 
       vm.contactUsForm = {"name":"","phone":"","toEmail":"","subject":"","message":""};
       var SGKey = "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";
