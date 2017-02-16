@@ -1,9 +1,13 @@
 #engagement {
       background-color: #ffffff;
       min-height: 750px;
-      .header-window {
-        @media @mobile-device{ img { top: -100px; }  }
-      }
+
+    .sectionTemplate {
+      @media @mobile-device { min-height: 750px; }
+    }
+    .header-window {
+      @media @mobile-device{ img { top: -100px; }  }
+    }
 
       text-align: left;
       .Emodels {
@@ -19,5 +23,8 @@
           .mobile-model-img { display: block; }
           .model-img { display: none; }
         }
+      }
+      .parallax-window {
+        @media @mobile-device { position: absolute; }
       }
 }

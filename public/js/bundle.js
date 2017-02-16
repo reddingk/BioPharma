@@ -117,6 +117,11 @@
         return returnParams;
       }
 
+      // Header Click
+      $("#myNavbar a").on("click", function () {
+        $('.navbar-toggle').click();
+      });
+
     }]);
 
 })();

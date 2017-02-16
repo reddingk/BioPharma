@@ -18,14 +18,16 @@
         width: 75%;
         margin: 0 auto;
         text-align: left;
+        @media @mobile-device{ text-align: center; }
         .careers-section {
           .career-item {
             font-size: 1.5rem;
             color: #256db5;
-
+            @media @mobile-device { font-size: 2.5rem;}
             a {
-              i { margin-right: 7px;}
-              span { } 
+              &:hover { text-decoration: none; }
+              i { margin-right: 7px;    }
+              span { &:hover { text-decoration: underline; }}
             }
           }
         }
