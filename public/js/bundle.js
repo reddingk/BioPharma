@@ -46,30 +46,6 @@
 
 })();
 
-angular.module('directives', []).directive('sectionBottom', function ($window) {
-  return {
-    restrict: 'EA',
-    link: function ($scope, element, attrs) {
-
-      angular.element($window).bind("scroll", function() {
-        var bottomSection = angular.element(document.getElementsByClassName("mainBody"))[0].children[1].offsetTop;
-        var windowp = angular.element($window)[0];
-        var invPop = angular.element(document.getElementsByClassName("investorsPop"));
-
-        if((windowp.innerHeight == bottomSection) || (windowp.pageYOffset > (bottomSection - this.innerHeight))){
-          if(!invPop.hasClass("screenPass"))
-            invPop.addClass("screenPass");
-        }
-        else {
-          if(invPop.hasClass("screenPass")){
-            invPop.removeClass("screenPass");
-          }
-        }
-      });
-    }
-  }
-});
-
 (function(){
    "use strict";
 
@@ -93,6 +69,8 @@ angular.module('directives', []).directive('sectionBottom', function ($window) {
       ];
 
       vm.EModels = [{"title":"Strategic Plan", "id":"SP", "img":"models/strategyplan.svg","mimg":"models/mobile/strategyplan_m.svg", "isopen":false},{"title":"Innovative Management", "id":"IM","img":"models/innovativemanagement.svg", "mimg":"models/mobile/innovativemanagement_m.svg","isopen":false},{"title":"Business Model", "id":"BM","img":"models/businessmodel.svg", "mimg":"models/mobile/businessmodel_m.svg","isopen":false}];
+
+      vm.careersList =[ {"title":"Research Associate","link":"docs/job_posting_001.docx", "link_title":"job_posting_001.docx"}];
 
       vm.contactUsForm = {"name":"","phone":"","toEmail":"","subject":"","message":""};
       var SGKey = "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";
@@ -142,3 +120,27 @@ angular.module('directives', []).directive('sectionBottom', function ($window) {
     }]);
 
 })();
+
+angular.module('directives', []).directive('sectionBottom', function ($window) {
+  return {
+    restrict: 'EA',
+    link: function ($scope, element, attrs) {
+
+      angular.element($window).bind("scroll", function() {
+        var bottomSection = angular.element(document.getElementsByClassName("mainBody"))[0].children[1].offsetTop;
+        var windowp = angular.element($window)[0];
+        var invPop = angular.element(document.getElementsByClassName("investorsPop"));
+
+        if((windowp.innerHeight == bottomSection) || (windowp.pageYOffset > (bottomSection - this.innerHeight))){
+          if(!invPop.hasClass("screenPass"))
+            invPop.addClass("screenPass");
+        }
+        else {
+          if(invPop.hasClass("screenPass")){
+            invPop.removeClass("screenPass");
+          }
+        }
+      });
+    }
+  }
+});

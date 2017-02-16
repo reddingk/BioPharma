@@ -1,8 +1,18 @@
 <div class="templateBody careers">
   <h1 class="sectionHeader">Careers</h1>
 
-  <h2>Please Check Back For Open Positions</h2>
 
-  <!--<div class="header-window"><img src="/img/backgrounds/2.jpg"></div>-->
+  <!--<h2>Please Check Back For Open Positions</h2>-->
+  <div class="careers-page">
+    <div class="careers-section">
+      <div class="career-item" ng-repeat="item in hc.careersList">
+        <a href="{{item.link}}" download="{{item.link_title}}" target="_blank">
+          <i class="fa fa-download"></i>
+          <span>{{item.title}}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <div class="parallax-window p-careers"></div>
 </div>

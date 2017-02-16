@@ -42,11 +42,17 @@ var config = {
       'app/libs/animate.css/animate.min.css',
       'app/libs/angular-bootstrap/ui-bootstrap-csp.css',
       'app/libs/fullcalendar/dist/fullcalendar.min.css'
+    ],
+    libsFonts: [
+      'app/libs/font-awesome/fonts/**',
+      'app/libs/bootstrap/fonts/**',
+      'app/fonts/**'
     ]
   },
   dest:{
     appJs:'public/js',
-    appCSS:'public/css'
+    appCSS:'public/css',
+    appFonts:'public/fonts'
   }
 };
 
@@ -90,9 +96,13 @@ gulp.task('lib-css', function(){
       .pipe(concat('libs.min.css'))
       .pipe(gulp.dest(config.dest.appCSS));
 });
-
+gulp.task('lib-fonts', function(){
+  // Move all fonts files into one the public fonts folder
+  return gulp.src(config.src.libsFonts)
+      .pipe(gulp.dest(config.dest.appFonts));
+});
 gulp.task('build', function(done){
-  runSequence('clean', ['app-js', 'app-less', 'lib-js', 'lib-css'], done);
+  runSequence('clean', ['app-js', 'app-less', 'lib-js', 'lib-css','lib-fonts'], done);
 });
 
 gulp.task('default', ['build'], function () { });
