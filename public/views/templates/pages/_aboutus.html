@@ -10,7 +10,7 @@
           <div class="board-director">
             <div class="director" ng-repeat="director in info.content">
               <div class="director-header">
-                <div class="director-name">{{director.name}} <span>({{director.title}})</span></div>
+                <div class="director-name">{{director.name}} <span ng-if="director.title != null">({{director.title}})</span></div>
               </div>
               <ul class="director-resume"><li class="item" ng-repeat="item in director.resume">{{item}}</li></ul>
             </div>

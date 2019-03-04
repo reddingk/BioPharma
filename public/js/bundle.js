@@ -10,6 +10,43 @@
 })();
 
 (function(){
+
+  angular
+    .module('config')
+    .config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
+      $stateProvider
+      .state('app', {
+        url: "/",
+        views: {
+          'content':{
+            templateUrl: 'views/home.html',
+            controller: 'HomeController as hc'
+          },
+          'header':{
+            templateUrl: 'views/templates/_header.html'
+          },
+          'footer':{
+            templateUrl: 'views/templates/_footer.html'
+          }
+        }
+      })
+      .state('app.construction', {
+        url: "underconstruction",
+        views: {
+          'content@': {
+            templateUrl: 'views/construction.html'
+          }
+        }
+      });
+
+      $urlRouterProvider.otherwise('/');
+      $locationProvider.html5Mode(true);
+    }]);
+
+
+})();
+
+(function(){
    "use strict";
 
     angular.module('homeCtrl').controller('HomeController', ['$state','$http', function($state, $http){
@@ -29,7 +66,7 @@
         {"title":"Overview", "type":"text", "isopen":true, "content":"JK BioPharma Solutions, Inc. (JKBP) was established in January 2013 pursuing to be a sophisticated outstanding developer in new drug development. We develop drug candidates throughout early stage to human proof-of-concept to maximize their value, which enables successful out-licensing to global leading pharmaceuticals. We accelerate drug development by innovation, out-sourcing and key personnel. We establish a substantial system to work with start-up biotech companies as well as established Bio/Pharmaceutical foreign companies pursuing globalization, especially the US market."},
         {"title":"Board Of Directors", "type":"list", "isopen":false, "content":[
           {"name":"Jeong Gyun Oh", 
-          "title":"Molecular & Cell Biology", 
+          "title":null, 
           "resume":[
             "Presently Board of Director at NeuroBo Pharmaceuticals, Inc.", 
             "Formerly Vice President of Finance at CDNetworks Co., Ltd.",
@@ -95,43 +132,6 @@
       });
 
     }]);
-
-})();
-
-(function(){
-
-  angular
-    .module('config')
-    .config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
-      $stateProvider
-      .state('app', {
-        url: "/",
-        views: {
-          'content':{
-            templateUrl: 'views/home.html',
-            controller: 'HomeController as hc'
-          },
-          'header':{
-            templateUrl: 'views/templates/_header.html'
-          },
-          'footer':{
-            templateUrl: 'views/templates/_footer.html'
-          }
-        }
-      })
-      .state('app.construction', {
-        url: "underconstruction",
-        views: {
-          'content@': {
-            templateUrl: 'views/construction.html'
-          }
-        }
-      });
-
-      $urlRouterProvider.otherwise('/');
-      $locationProvider.html5Mode(true);
-    }]);
-
 
 })();
 
