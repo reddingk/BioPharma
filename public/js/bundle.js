@@ -10,43 +10,6 @@
 })();
 
 (function(){
-
-  angular
-    .module('config')
-    .config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
-      $stateProvider
-      .state('app', {
-        url: "/",
-        views: {
-          'content':{
-            templateUrl: 'views/home.html',
-            controller: 'HomeController as hc'
-          },
-          'header':{
-            templateUrl: 'views/templates/_header.html'
-          },
-          'footer':{
-            templateUrl: 'views/templates/_footer.html'
-          }
-        }
-      })
-      .state('app.construction', {
-        url: "underconstruction",
-        views: {
-          'content@': {
-            templateUrl: 'views/construction.html'
-          }
-        }
-      });
-
-      $urlRouterProvider.otherwise('/');
-      $locationProvider.html5Mode(true);
-    }]);
-
-
-})();
-
-(function(){
    "use strict";
 
     angular.module('homeCtrl').controller('HomeController', ['$state','$http', function($state, $http){
@@ -64,7 +27,16 @@
       ];
       vm.aboutInfo = [
         {"title":"Overview", "type":"text", "isopen":true, "content":"JK BioPharma Solutions, Inc. (JKBP) was established in January 2013 pursuing to be a sophisticated outstanding developer in new drug development. We develop drug candidates throughout early stage to human proof-of-concept to maximize their value, which enables successful out-licensing to global leading pharmaceuticals. We accelerate drug development by innovation, out-sourcing and key personnel. We establish a substantial system to work with start-up biotech companies as well as established Bio/Pharmaceutical foreign companies pursuing globalization, especially the US market."},
-        {"title":"Board Of Directors", "type":"list", "isopen":false, "content":[{"name":"Richard J. Kang, PhD", "title":"Molecular & Cell Biology", "resume":["Founder of JK BioPharma Solutions, Inc", "Presently Board of Director & Chief Operating Officer at NeoImmuneTech, Inc (Maryland)","Leader Group Mentors of Korea Innovation Center (KIC) for Ministry of Science, ICT and Future Planning (MSIP) of Korea", "Formerly Chief Executive Officer at NeoImmuneTech, Inc","PhD from the University of Edinburgh","Serial entrepreneur, experience in Management, Operation, R&D, Clinical Development and Business Development in Bio/Pharma companies", "Various research experience for 17 years (20 publications in Cell, Nature, J of Pathology etc.; 9 patents)" ]},{"name":"Sun Dae Kang, PhD", "title":"Economics", "resume":["Formerly Chairman at Nexol Investments", "Formerly Adjunctive Faculty at Myungji University", "Formerly the first Head of Economic Research Institute at Kyobo Life Insurance", "Formerly Vice President Kyobo Life Insurance", "Formerly Vice President at Hanshin Securities", "Formerly Director at Daewoo Economic Research Institute", "PhD from Yunsei University", "Depth of expertise across multiple economic domains including venture capitals, securities etc." ]} ]},
+        {"title":"Board Of Directors", "type":"list", "isopen":false, "content":[
+          {"name":"Jeong Gyun Oh", 
+          "title":"Molecular & Cell Biology", 
+          "resume":[
+            "Presently Board of Director at NeuroBo Pharmaceuticals, Inc.", 
+            "Formerly Vice President of Finance at CDNetworks Co., Ltd.",
+            "BA, Business Administration from Seoul National University", 
+            "Extensive experience of finance operations including investment, accounting etc." 
+          ]},
+            {"name":"Sun Dae Kang, PhD", "title":"Economics", "resume":["Formerly Chairman at Nexol Investments", "Formerly Adjunctive Faculty at Myungji University", "Formerly the first Head of Economic Research Institute at Kyobo Life Insurance", "Formerly Vice President Kyobo Life Insurance", "Formerly Vice President at Hanshin Securities", "Formerly Director at Daewoo Economic Research Institute", "PhD from Yunsei University", "Depth of expertise across multiple economic domains including venture capitals, securities etc." ]} ]},
         {"title":"Special Advisors", "type":"text", "isopen":false, "content":"JK BioPharma Solutions, Inc. organizes a project-specialized scientific advisory group when we commit the project with a collaborator. The special advisory group consisting of substantially experienced experts in the area of the specified indication of a pipeline provides the most effective strategy to the project."}
       ];
 
@@ -123,6 +95,43 @@
       });
 
     }]);
+
+})();
+
+(function(){
+
+  angular
+    .module('config')
+    .config(['$stateProvider', '$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
+      $stateProvider
+      .state('app', {
+        url: "/",
+        views: {
+          'content':{
+            templateUrl: 'views/home.html',
+            controller: 'HomeController as hc'
+          },
+          'header':{
+            templateUrl: 'views/templates/_header.html'
+          },
+          'footer':{
+            templateUrl: 'views/templates/_footer.html'
+          }
+        }
+      })
+      .state('app.construction', {
+        url: "underconstruction",
+        views: {
+          'content@': {
+            templateUrl: 'views/construction.html'
+          }
+        }
+      });
+
+      $urlRouterProvider.otherwise('/');
+      $locationProvider.html5Mode(true);
+    }]);
+
 
 })();
 
